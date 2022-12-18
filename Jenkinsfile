@@ -3,7 +3,7 @@ pipeline {
                 label 'slave1'
                 }
         stages {
-                stage ("pull-scm") {
+                stage ("pull-scm-code") {
                         steps {
                                 git branch: 'python', url: 'https://github.com/siddharth0595/python-pipeline.git'
                                 }
