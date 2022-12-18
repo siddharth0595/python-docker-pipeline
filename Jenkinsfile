@@ -19,9 +19,9 @@ ipipeline {
 			withCredentials([string(credentialsId: 'docker_hub', variable: 'docker_hub_password_var')])   {
 				sh 'sudo docker login -u siddharth121 -p ${docker_hub_password_var}'
 				sh 'sudo docker push siddharth121/python-docker:$BUILD_TAG'
-					}
 				}
 			}
+		}
 		 stage ("test") {
                         steps {
                                 sh 'sudo docker run -dit -p 8081:8080 --name web1 siddharth121/python-docker:$BUILD_TAG'
