@@ -14,6 +14,11 @@ pipeline {
                                 sh 'sudo docker tag python:$BUILD_TAG siddharth121/python-docker:$BUILD_TAG'
                                 }
                         }
+		stage ("test") {
+			steps {
+				sh 'sudo docker run -dit -p 8081:8080 --name web1 siddharth121/python-docker:$BUILD_TAG'
+				}
+			}
                 stage ("test") {
                         steps {
                                 sh 'python3 -V'
