@@ -24,7 +24,7 @@ pipeline {
 		}
 		stage ("test") {
                         steps {
-                                sh 'sudo docker run -dit -p 8081:8080 --name web1 siddharth121/python-docker:$BUILD_TAG'
+                                sh 'sudo docker run -dit -p 8005:8080 --name web1 siddharth121/python-docker:$BUILD_TAG'
                                 }
                         }
                 stage ("Qat-test") {
