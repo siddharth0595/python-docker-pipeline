@@ -5,7 +5,7 @@ pipeline {
         stages {
                 stage ("pull-scm-code") {
                         steps {
-                                git branch: 'python', url: 'https://github.com/siddharth0595/python-pipeline.git'
+                                git branch: 'main', url: 'https://github.com/siddharth0595/python-docker-pipeline.git'
                                 }
                         }
                 stage ("build-image") {
