@@ -27,12 +27,5 @@ pipeline {
                                 sh 'sudo docker run -dit -p 8005:8080 --name web1 siddharth121/python-docker:$BUILD_TAG'
                                 }
                         }
-                stage ("Qat-test") {
-                        steps {
-                                sh 'python3 -V'
-                                sh 'python3 cp.py'
-                                sh 'python3 test.py'
-                                }
-                        }
                 }
         }
