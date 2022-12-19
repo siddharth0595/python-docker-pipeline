@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-RUN sudo apt install python3-pip
+CMD sudo apt install python3-pip
 WORKDIR /home/ubuntu
 COPY  . .
 RUN sudo python3 -V
