@@ -1,7 +1,6 @@
 FROM ubuntu:18.04
 CMD  sudo apt install python3-pip
 WORKDIR /home/ubuntu
-COPY  ./test.py /home/ubuntu/test.py
-COPY  ./cp.py /home/ubuntu/cp.py 
-
+COPY  . .
+RUN python test.py
 EXPOSE 8005
