@@ -3,6 +3,6 @@ CMD sudo apt install python3-pip
 WORKDIR /home/ubuntu
 COPY  . .
 CMD sudo python3 -V
-RUN sudopython3 cp.py
-RUN sudo python3 test.py
+CMD sudo python3 cp.py
+CMD sudo python3 test.py
 EXPOSE 8005
